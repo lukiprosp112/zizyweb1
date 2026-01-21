@@ -33,8 +33,37 @@
     <!-- Keywords y locale -->
     <meta name="keywords" content="desarrollo web Zaragoza, marketing digital Aragón, SEO Zaragoza, Google Ads Zaragoza, consultor web" />
     <meta property="og:locale" content="es_ES" />
-    
   </head>
+
+  <body>
+    <!-- Root container para React -->
+    <div id="root"></div>
+
+    <!-- Fallback si JavaScript está deshabilitado -->
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; text-align: center; background: #f5f5f5;">
+        <div style="max-width: 400px; padding: 40px;">
+          <h1 style="color: #333; margin-bottom: 20px;">⚠️ JavaScript Requerido</h1>
+          <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+            Esta aplicación requiere JavaScript habilitado para funcionar correctamente.
+          </p>
+          <p style="color: #999; font-size: 14px;">
+            Por favor, habilita JavaScript en tu navegador y recarga la página.
+          </p>
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Script principal de la aplicación -->
     <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+
+    <!-- Error handler global para capturar errores JS -->
+    <script>
+      window.addEventListener('error', function(event) {
+        console.error('Error capturado:', event.error);
+      });
+      
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('Promise rechazada:', event.reason);
+      });
+    </script>
