@@ -6,14 +6,13 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Formspree maneja la validación y envío
     setIsLoading(true);
     
-    // Mostrar mensaje de éxito después de un breve tiempo
+    // El formulario de Formspree se enviará automáticamente
     setTimeout(() => {
       setIsSubmitted(true);
       setIsLoading(false);
-    }, 1000);
+    }, 1500);
   };
 
   if (isSubmitted) {
@@ -61,7 +60,7 @@ const Contact = () => {
 
           {/* Form - Formspree */}
           <form
-            action="https://formspree.io/f/xyzabcde"
+            action="https://formspree.io/f/mykkoyza"
             method="POST"
             onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-8 shadow-lg border border-border"
