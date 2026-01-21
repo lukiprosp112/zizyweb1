@@ -1,49 +1,221 @@
 # ============================================================================
-# robots.txt - Zaragoza Digital Scale (zzyworks.com)
-# Optimizado para Bing Webmaster Tools + Google Search Console 2026
-# ✅ PERMITE RASTREO COMPLETO - Sin avisos de bloqueo
+# robots.txt - Zizy | Desarrollo Web y Marketing Digital Zaragoza
+# Optimizado para Google SEO, IA-SEO y búsquedas locales 2026
+# ✅ Rastreo completo permitido - SEO máximo
 # ============================================================================
 
 # ============================================================================
-# CONFIGURACIÓN GLOBAL - Todos los bots
+# CONFIGURACIÓN GLOBAL - Todos los bots (por defecto permitido)
 # ============================================================================
 User-agent: *
 Allow: /
+Crawl-delay: 1
+Request-rate: 10/1s
 
 # ============================================================================
-# GOOGLEBOT - Acceso completo sin restricciones
+# GOOGLE SEARCH CONSOLE - Acceso prioritario sin restricciones
 # ============================================================================
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
+Request-rate: 100/1s
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 0
+
+User-agent: AdsBot-Google
+Allow: /
+Crawl-delay: 0
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Crawl-delay: 0
 
 # ============================================================================
-# BINGBOT - Acceso completo sin restricciones
+# BING WEBMASTER TOOLS - Acceso completo para indexación
 # ============================================================================
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: BingPreview
+Allow: /
+Crawl-delay: 1
+
+User-agent: MSNBot
+Allow: /
+Crawl-delay: 1
 
 # ============================================================================
-# Otros bots útiles
+# AI BOTS OPTIMIZATION - ChatGPT, Claude, Perplexity, Google AI, etc.
+# ============================================================================
+
+# GPTBot (OpenAI ChatGPT, ChatGPT Plus, Plugins)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+# Claude Web Crawler (Anthropic Claude)
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+# Perplexity AI Crawler
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Google AI / Google AI Overviews
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0
+
+# Bard (si sigue activo)
+User-agent: Bard
+Allow: /
+Crawl-delay: 1
+
+# Copilot (Microsoft)
+User-agent: Copilot
+Allow: /
+Crawl-delay: 1
+
+# Apple Intelligence
+User-agent: AppleBot
+Allow: /
+Crawl-delay: 1
+
+# Anthropic (Claude training)
+User-agent: Anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# Other AI/Search Bots
+User-agent: CCBot
+Allow: /
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# ============================================================================
+# SOCIAL MEDIA CRAWLERS - Mejor visualización en redes
 # ============================================================================
 User-agent: Twitterbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: facebookexternalhit
 Allow: /
+Crawl-delay: 1
 
 User-agent: LinkedInBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: WhatsApp
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
 
 # ============================================================================
-# SITEMAPS - Indexación rápida y completa
+# BAD BOTS / AGGRESSIVE CRAWLERS - Limitar intensidad
 # ============================================================================
+
+# Ahrefs
+User-agent: AhrefsBot
+User-agent: AhrefsSiteAudit
+Crawl-delay: 60
+Request-rate: 1/10s
+
+# SEMrush
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+Crawl-delay: 60
+Request-rate: 1/10s
+
+# Yandex
+User-agent: Yandex
+Crawl-delay: 5
+
+# Majestic
+User-agent: MJ12bot
+Crawl-delay: 30
+
+# ============================================================================
+# DIRECTIVES FOR SEARCH ENGINE OPTIMIZATION (SEO 2026)
+# ============================================================================
+
+# Allow indexation of important resources
+Allow: /
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.svg
+Allow: /public/
+
+# Don't disallow anything important
+# (Everything else is allowed by default)
+
+# ============================================================================
+# PERFORMANCE & CRAWL OPTIMIZATION
+# ============================================================================
+
+# Best time to crawl (UTC)
+Visit-time: 00:00-06:00
+
+# Allow search engines to access your page at optimal times
+Crawl-delay: 1
+Request-rate: 10/1s
+
+# ============================================================================
+# SITEMAP REFERENCES - CRITICAL FOR INDEXATION
+# ============================================================================
+
+# Primary sitemap (HTML pages)
 Sitemap: https://zzyworks.com/sitemap.xml
+
+# XML Sitemap for search engines
+Sitemap: https://zzyworks.com/sitemap-pages.xml
+
+# ============================================================================
+# ADDITIONAL DIRECTIVES FOR LOCAL SEO (Zaragoza/Aragón)
+# ============================================================================
+
+# This site is for local business in Zaragoza, Spain
+# Keywords: desarrollo web Zaragoza, marketing digital Aragón, SEO Zaragoza
+# Target regions: Zaragoza, Aragón, Spain
+# Allow full indexation for local search visibility
+
+# ============================================================================
+# NOTES FOR SEO/AI OPTIMIZATION 2026
+# ============================================================================
+# ✅ GPTBot: Allowed - Content can be cited by ChatGPT
+# ✅ Claude-Web: Allowed - Content can be cited by Claude AI  
+# ✅ PerplexityBot: Allowed - Content can be cited by Perplexity
+# ✅ Google-Extended: Allowed - Content for Google AI Overviews
+# ✅ Googlebot: High priority - Fast crawl rate
+# ✅ Bingbot: High priority - Fast crawl rate
+# ✅ Sitemaps: Multiple references for fast discovery
+# ✅ Local SEO: Optimized for Zaragoza/Aragón searches
