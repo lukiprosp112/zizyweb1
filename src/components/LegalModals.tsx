@@ -34,11 +34,11 @@ const LegalModals = ({ activeModal, onClose }: LegalModalsProps) => {
       onClick={onClose}
     >
       <div
-        className="relative bg-card rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden"
+        className="relative bg-card rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-card border-b border-border px-6 py-4 flex items-center justify-between">
+        <div className="sticky top-0 bg-card border-b border-border px-6 py-4 flex items-center justify-between flex-shrink-0">
           <h2 className="text-xl font-bold text-foreground">{content.title}</h2>
           <button
             onClick={onClose}
@@ -50,13 +50,15 @@ const LegalModals = ({ activeModal, onClose }: LegalModalsProps) => {
         </div>
 
         {/* Content */}
-        {activeModal === "aviso" ? (
-          <AvisoLegal onClose={onClose} />
-        ) : activeModal === "privacidad" ? (
-          <PoliticaPrivacidad onClose={onClose} />
-        ) : activeModal === "cookies" ? (
-          <PoliticaCookies onClose={onClose} />
-        ) : null}
+        <div className="overflow-y-auto flex-1">
+          {activeModal === "aviso" ? (
+            <AvisoLegal onClose={onClose} />
+          ) : activeModal === "privacidad" ? (
+            <PoliticaPrivacidad onClose={onClose} />
+          ) : activeModal === "cookies" ? (
+            <PoliticaCookies onClose={onClose} />
+          ) : null}
+        </div>
       </div>
     </div>
   );
