@@ -9,6 +9,7 @@ import About from "@/components/About";
 import Blog10Top from "@/components/Blog10Top";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
+import FAQAi from "@/components/FAQAi";
 import Footer from "@/components/Footer";
 import LegalModals from "@/components/LegalModals";
 import CookieBanner from "@/components/CookieBanner";
@@ -40,6 +41,7 @@ const Index = () => {
         <Blog10Top />
         <Contact />
         <FAQ />
+        <FAQAi />
       </main>
 
       <Footer onOpenModal={handleOpenModal} />
