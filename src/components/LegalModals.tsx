@@ -1,7 +1,7 @@
 import { X } from "lucide-react";
-import AvisoLegalForm from "./AvisoLegalForm";
-import PoliticaPrivacidadForm from "./PoliticaPrivacidadForm";
-import PoliticaCookiesForm from "./PoliticaCookiesForm";
+import AvisoLegal from "./AvisoLegal";
+import PoliticaPrivacidad from "./PoliticaPrivacidad";
+import PoliticaCookies from "./PoliticaCookies";
 
 interface LegalModalsProps {
   activeModal: "aviso" | "privacidad" | "cookies" | null;
@@ -51,11 +51,11 @@ const LegalModals = ({ activeModal, onClose }: LegalModalsProps) => {
 
         {/* Content */}
         {activeModal === "aviso" ? (
-          <AvisoLegalForm onClose={onClose} />
+          <AvisoLegal onClose={onClose} />
         ) : activeModal === "privacidad" ? (
-          <PoliticaPrivacidadForm onClose={onClose} />
+          <PoliticaPrivacidad onClose={onClose} />
         ) : activeModal === "cookies" ? (
-          <PoliticaCookiesForm onClose={onClose} />
+          <PoliticaCookies onClose={onClose} />
         ) : null}
       </div>
     </div>

@@ -30,7 +30,7 @@ const Footer = ({ onOpenModal }: FooterProps) => {
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                Zaragoza, Aragón (España)
+                C/ Concepción Saiz de Otero 23, Zaragoza
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
