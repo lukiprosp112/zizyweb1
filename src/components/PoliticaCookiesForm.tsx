@@ -1,44 +1,68 @@
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
-const avisoLegalContent = `
-## Datos Identificativos
+const politicaCookiesContent = `
+## ¿Qué son las cookies?
 
-En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico, se informa:
+Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando accedes a nuestro sitio web. Se utilizan para recordar información sobre tu visita y mejorar tu experiencia de navegación.
 
-- **Titular:** Lucas Bueno (Zizy)
+## Tipos de cookies que utilizamos
+
+### Cookies técnicas y funcionales
+- **Finalidad:** Garantizar el funcionamiento correcto del sitio web, recordar tu idioma, tus preferencias de accesibilidad y mantener la seguridad.
+- **Duración:** Session o largo plazo.
+- **Obligatoria:** Sí, según LSSI-CE y RGPD.
+
+### Cookies analíticas
+- **Finalidad:** Analizar el uso del sitio web, medir el tráfico, entender el comportamiento de los usuarios y mejorar nuestros servicios.
+- **Proveedor:** Google Analytics
+- **Duración:** 2 años
+- **Consentimiento requerido:** Sí
+
+### Cookies de marketing/publicidad
+- **Finalidad:** Mostrar anuncios personalizados, realizar seguimiento de conversiones y medir la efectividad de campañas publicitarias.
+- **Duración:** Según la plataforma de publicidad
+- **Consentimiento requerido:** Sí
+
+## Responsable del Tratamiento
+
+- **Nombre:** Lucas Bueno (Zizy)
 - **NIF:** 73054829K
-- **Domicilio:** C/ Concepción Saiz de Otero 23, Zaragoza, Aragón (España)
-- **Teléfono:** 627 126 092
-- **Email:** lukiprosp@gmail.com
-- **Actividad:** Consultoría de software (IAE 763) y Servicios de publicidad (IAE 844)
+- **Correo:** lukiprosp@gmail.com
+- **Dirección:** C/ Concepción Saiz de Otero 23, Zaragoza, Aragón (España)
 
-## Objeto
+## Derechos del usuario
 
-El presente sitio web tiene por objeto facilitar información sobre los servicios de consultoría tecnológica y marketing digital ofrecidos por Lucas Bueno (Zizy) en Zaragoza y toda España.
+De acuerdo con el RGPD, tienes derecho a:
+- **Acceso:** Saber qué cookies se utilizan y sus características.
+- **Oposición:** Rechazar el uso de cookies no esenciales.
+- **Eliminación:** Solicitar la supresión de datos asociados a cookies.
+- **Portabilidad:** Recibir tus datos en formato estructurado.
 
-## Propiedad Intelectual
+## Cómo gestionar tus cookies
 
-Todos los contenidos del sitio web, incluyendo textos, fotografías, gráficos, imágenes, iconos, tecnología, software, así como su diseño gráfico y códigos fuente, constituyen una obra cuya propiedad pertenece a Lucas Bueno (Zizy).
+### En tu navegador:
+Puedes controlar, aceptar o rechazar cookies desde la configuración de tu navegador:
+- Chrome: Configuración > Privacidad y seguridad > Cookies
+- Firefox: Configuración > Privacidad > Cookies
+- Safari: Preferencias > Privacidad
+- Edge: Configuración > Privacidad
 
-## Limitación de Responsabilidad
+### A través de plataformas:
+- **Google Analytics:** https://tools.google.com/dlpage/gaoptout
+- **DoubleClick:** https://support.google.com/ads/answer/7395996
 
-Lucas Bueno (Zizy) no se hace responsable de:
-- Los posibles daños derivados de interferencias, interrupciones, virus informáticos, averías telefónicas o desconexiones.
-- De la información contenida en páginas web de terceros a las que se pueda acceder mediante enlaces.
+## Actualización de esta política
 
-## Legislación Aplicable
-
-Las presentes condiciones se rigen por la legislación española, siendo competentes los Juzgados y Tribunales de Zaragoza para conocer de cuantas cuestiones pudieran suscitarse.
+Esta Política de Cookies puede ser actualizada periódicamente. Cualquier cambio será comunicado en esta página y reflejará automáticamente en tu próxima visita.
 
 *Última actualización: Enero 2026*
 `;
 
-interface AvisoLegalFormProps {
+interface PoliticaCookiesFormProps {
   onClose: () => void;
 }
 
-export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
+export default function PoliticaCookiesForm({ onClose }: PoliticaCookiesFormProps) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -63,34 +87,17 @@ export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
     setError(null);
 
     try {
-      // Validación básica
       if (!formData.fullName.trim() || !formData.email.trim() || !formData.reason.trim()) {
         setError("Por favor, completa todos los campos obligatorios");
         setLoading(false);
         return;
       }
 
-      // Validar email básicamente
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(formData.email)) {
         setError("Por favor, ingresa un email válido");
         setLoading(false);
         return;
-      }
-
-      // Integración con EmailJS
-      try {
-        await emailjs.sendForm(
-          'service_abcdef123456',          // Service ID
-          'template_hteqn3i',              // Template ID
-          e.currentTarget as HTMLFormElement,
-          {
-            publicKey: 'TnkQKxXs1mRftbNIp',  // Public Key
-          }
-        );
-      } catch (emailErr) {
-        console.error('Error al enviar email:', emailErr);
-        // Continuamos incluso si el email falla, mostrando el contenido
       }
 
       setFormSubmitted(true);
@@ -109,13 +116,13 @@ export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
         <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
           <p className="text-green-800 font-semibold">✓ Solicitud enviada exitosamente</p>
           <p className="text-green-700 text-sm mt-1">
-            Te responderemos pronto con el contenido completo a tu email.
+            Te responderemos pronto con información adicional sobre cookies.
           </p>
         </div>
 
         {/* Contenido legal */}
         <div className="prose prose-sm max-w-none text-muted-foreground">
-          {avisoLegalContent.split("\n").map((line, index) => {
+          {politicaCookiesContent.split("\n").map((line, index) => {
             if (line.startsWith("## ")) {
               return (
                 <h3 key={index} className="text-lg font-bold text-foreground mt-6 mb-3">
@@ -163,8 +170,8 @@ export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
       {/* Texto introductorio */}
       <div className="mb-6">
         <p className="text-muted-foreground leading-relaxed">
-          El contenido del Aviso Legal está protegido. Por favor, completa este formulario para solicitar
-          acceso. Te lo enviaremos por email o mostraremos aquí tras verificación.
+          Aquí te explicamos cómo utilizamos cookies en nuestro sitio web. Completa este formulario si deseas
+          información adicional sobre el tratamiento de cookies y tus derechos según el RGPD.
         </p>
       </div>
 
@@ -214,7 +221,7 @@ export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
             name="reason"
             value={formData.reason}
             onChange={handleInputChange}
-            placeholder="Cuéntanos por qué necesitas acceder al Aviso Legal..."
+            placeholder="Cuéntanos por qué necesitas información sobre cookies..."
             rows={4}
             className="w-full px-3 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
             disabled={loading}
@@ -234,7 +241,7 @@ export default function AvisoLegalForm({ onClose }: AvisoLegalFormProps) {
           disabled={loading}
           className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {loading ? "Enviando solicitud..." : "Solicitar acceso al Aviso Legal"}
+          {loading ? "Enviando solicitud..." : "Solicitar información sobre cookies"}
         </button>
       </form>
 

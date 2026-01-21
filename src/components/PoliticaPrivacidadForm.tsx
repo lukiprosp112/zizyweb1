@@ -5,8 +5,8 @@ const politicaPrivacidadContent = `
 ## Responsable del Tratamiento
 
 - **Responsable:** Lucas Bueno (Zizy)
-- **NIF:** B12345678
-- **Dirección:** Zaragoza, Aragón (España)
+- **NIF:** 73054829K
+- **Dirección:** C/ Concepción Saiz de Otero 23, Zaragoza, Aragón (España)
 - **Email:** lukiprosp@gmail.com
 - **Teléfono:** 627 126 092
 

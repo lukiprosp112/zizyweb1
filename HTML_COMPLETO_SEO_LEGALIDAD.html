@@ -1,31 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Meta básicos -->
+<head>
+    <!-- ========================================
+         METADATOS BÁSICOS Y CHARSET
+         ======================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Title y descripción -->
+    <!-- ========================================
+         TITLE Y DESCRIPCIÓN PARA SEO
+         (Optimizados para evitar "No hay información disponible")
+         ======================================== -->
     <title>Zizy - Desarrollo Web y Marketing Digital en Zaragoza | Lucas Bueno</title>
     <meta name="description" content="Soy Lucas Bueno, consultor especializado en desarrollo web (React, Python) y marketing digital. Estrategias personalizadas de SEO y Google Ads en Zaragoza. Diagnóstico gratuito." />
     
-    <!-- Robots y canonical -->
+    <!-- ========================================
+         ROBOTS Y CANONICAL (SEO)
+         ======================================== -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <link rel="canonical" href="https://zzyworks.com/" />
     
-    <!-- Google site verification (add your verification code here) -->
-    <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
+    <!-- ========================================
+         VERIFICACIÓN DE SITIO
+         (Descomenta cuando tengas los códigos)
+         ======================================== -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+    <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" /> -->
     
-    <!-- Bing verification -->
-    <!-- <meta name="msvalidate.01" content="YOUR_CODE_HERE" /> -->
-    
-    <!-- Theme color y favicon -->
+    <!-- ========================================
+         TEMA Y FAVICON
+         ======================================== -->
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='sprayGrad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23ff4d00;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ff7a3d;stop-opacity:1' /></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23sprayGrad)'/><path d='M 35 45 Q 50 35 65 45 M 35 55 Q 50 65 65 55' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round'/><circle cx='30' cy='25' r='4' fill='%23fff' opacity='0.8'/><circle cx='70' cy='30' r='3' fill='%23fff' opacity='0.6'/><circle cx='25' cy='70' r='3' fill='%23fff' opacity='0.7'/></svg>" />
     
-    <!-- Open Graph (redes sociales) -->
+    <!-- ========================================
+         OPEN GRAPH (Redes Sociales)
+         Para que aparezca imagen y resumen correctos
+         ======================================== -->
     <meta property="og:site_name" content="Zizy | Desarrollo Web y Marketing Digital" />
     <meta property="og:title" content="Zizy - Desarrollo Web y Marketing Digital en Zaragoza" />
     <meta property="og:description" content="Lucas Bueno. Consultor especializado en desarrollo web y marketing digital. SEO, Google Ads, React y Python. Diagnóstico gratuito." />
@@ -36,28 +49,41 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
     
-    <!-- Twitter Card -->
+    <!-- ========================================
+         TWITTER CARD
+         ======================================== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@zzyworks" />
     <meta name="twitter:title" content="Zizy - Desarrollo Web y Marketing Digital Zaragoza" />
     <meta name="twitter:description" content="Lucas Bueno. Consultor especializado en desarrollo web y marketing digital. Diagnóstico gratuito." />
     <meta name="twitter:image" content="https://zzyworks.com/og-image.jpg" />
     
-    <!-- Author, locale y otros metadatos -->
+    <!-- ========================================
+         AUTOR Y KEYWORDS
+         ======================================== -->
     <meta name="author" content="Lucas Bueno" />
     <meta name="keywords" content="desarrollo web Zaragoza, marketing digital Aragón, SEO Zaragoza, Google Ads Zaragoza, consultor web, React developer, Python developer" />
     <meta property="og:locale" content="es_ES" />
     
-    <!-- LSSI-CE Compliance (Normativa española) -->
+    <!-- ========================================
+         LSSI-CE COMPLIANCE (Ley española)
+         Cumplimiento de normativa de servicios
+         de la sociedad de la información
+         ======================================== -->
     <meta name="dcterms.issued" content="2024" />
     <meta name="copyright" content="Lucas Bueno (Zizy)" />
     <meta name="dcterms.creator" content="Lucas Bueno" />
     
-    <!-- Preconnect y DNS Prefetch para performance -->
+    <!-- ========================================
+         PERFORMANCE (Preconnect y DNS Prefetch)
+         ======================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
-    <!-- Structured Data: Organization (JSON-LD) -->
+    <!-- ========================================
+         STRUCTURED DATA (JSON-LD)
+         Datos estructurados para Google
+         ======================================== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,16 +93,21 @@
       "url": "https://zzyworks.com",
       "logo": "https://zzyworks.com/og-image.jpg",
       "description": "Consultor híbrido especializado en desarrollo web y marketing digital en Zaragoza",
-      "sameAs": ["https://linkedin.com/in/lucas-bueno", "https://github.com/lukiprosp112"],
+      "sameAs": [
+        "https://linkedin.com/in/lucas-bueno",
+        "https://github.com/lukiprosp112"
+      ],
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "C/ Concepción Saiz de Otero 23",
         "addressLocality": "Zaragoza",
         "addressRegion": "Aragón",
+        "postalCode": "50001",
         "addressCountry": "ES"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+34-665-969-361",
+        "telephone": "+34-627-126-092",
         "contactType": "Customer Service",
         "email": "lukiprosp@gmail.com",
         "areaServed": ["ES", "Zaragoza", "Aragón"]
@@ -84,12 +115,14 @@
     }
     </script>
     
-    <!-- Sitemap reference for indexing -->
+    <!-- ========================================
+         SITEMAP Y ROBOTS.TXT REFERENCE
+         ======================================== -->
     <link rel="sitemap" type="application/xml" href="https://zzyworks.com/sitemap.xml" />
-  </head>
 
-  <body>
-    <!-- Root container para React -->
+</head>
+<body>
+    <!-- Root para aplicación React -->
     <div id="root"></div>
 
     <!-- Fallback si JavaScript está deshabilitado -->
@@ -110,7 +143,7 @@
     <!-- Script principal de la aplicación -->
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Error handler global para capturar errores JS -->
+    <!-- Error handler global -->
     <script>
       window.addEventListener('error', function(event) {
         console.error('Error capturado:', event.error);
@@ -120,3 +153,5 @@
         console.error('Promise rechazada:', event.reason);
       });
     </script>
+</body>
+</html>
