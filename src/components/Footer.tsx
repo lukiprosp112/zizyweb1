@@ -49,31 +49,34 @@ const Footer = ({ onOpenModal }: FooterProps) => {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-background">Legal</h4>
+            <h4 className="font-semibold text-background">Legal (RGPD)</h4>
+            <p className="text-background/70 text-xs mb-3">
+              Solicita nuestras políticas legales por email (cumplimiento RGPD):
+            </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <button
-                  onClick={() => onOpenModal("aviso")}
-                  className="text-background/70 hover:text-primary transition-colors"
+                <a
+                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Aviso%20Legal&body=Solicito%20el%20Aviso%20Legal%20de%20zzyworks.com"
+                  className="text-background/70 hover:text-primary transition-colors underline"
                 >
-                  Aviso Legal
-                </button>
+                  📄 Aviso Legal
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onOpenModal("privacidad")}
-                  className="text-background/70 hover:text-primary transition-colors"
+                <a
+                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Política%20de%20Privacidad&body=Solicito%20la%20Política%20de%20Privacidad%20de%20zzyworks.com"
+                  className="text-background/70 hover:text-primary transition-colors underline"
                 >
-                  Política de Privacidad
-                </button>
+                  🔒 Política de Privacidad
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onOpenModal("cookies")}
-                  className="text-background/70 hover:text-primary transition-colors"
+                <a
+                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Política%20de%20Cookies&body=Solicito%20la%20Política%20de%20Cookies%20de%20zzyworks.com"
+                  className="text-background/70 hover:text-primary transition-colors underline"
                 >
-                  Política de Cookies
-                </button>
+                  🍪 Política de Cookies
+                </a>
               </li>
             </ul>
           </div>
@@ -84,10 +87,13 @@ const Footer = ({ onOpenModal }: FooterProps) => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/60">
             <div className="text-center md:text-left">
               <p>
-                © {currentYear} <strong>Lucas Bueno (Zizy)</strong>
+                © {currentYear} <strong>Lucas Bueno (Zizy)</strong> · Consultor Digital
               </p>
               <p className="mt-1">
-                NIF: B12345678 | Domicilio: Zaragoza, Aragón (España)
+                NIF: 73054829K | Zaragoza, Aragón (España) | VAT: ES73054829K
+              </p>
+              <p className="mt-1 text-xs text-background/50">
+                Inscrito en el Registro Mercantil de Zaragoza
               </p>
             </div>
             <div className="flex items-center gap-2">
