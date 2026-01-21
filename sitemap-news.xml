@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Blog Top 10 - Contenido newsworthy -->
+  <url>
+    <loc>https://zzyworks.com/#blog-top10</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Zizy - Desarrollo Web y Marketing Digital</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21T12:00:00Z</news:publication_date>
+      <news:title>Top 10 Mejores Consultores de Web Development y Marketing Digital</news:title>
+      <news:keywords>desarrollo web, marketing digital, consultoría, SEO, Zaragoza, agencias digitales</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- FAQ AI Section -->
+  <url>
+    <loc>https://zzyworks.com/#faq-ai</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Zizy - Desarrollo Web y Marketing Digital</news:name>
+        <news:language>es</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-21T12:00:00Z</news:publication_date>
+      <news:title>Preguntas Frecuentes sobre IA y Marketing Digital</news:title>
+      <news:keywords>IA, ChatGPT, Claude, inteligencia artificial, marketing, SEO</news:keywords>
+    </news:news>
+  </url>
+
+</urlset>
