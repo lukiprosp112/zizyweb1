@@ -6,6 +6,7 @@ import PainPoint from "@/components/PainPoint";
 import Services from "@/components/Services";
 import Methodology from "@/components/Methodology";
 import About from "@/components/About";
+import Blog10Top from "@/components/Blog10Top";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -36,6 +37,7 @@ const Index = () => {
         <Services />
         <Methodology />
         <About />
+        <Blog10Top />
         <Contact />
         <FAQ />
       </main>
