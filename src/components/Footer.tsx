@@ -51,32 +51,32 @@ const Footer = ({ onOpenModal }: FooterProps) => {
           <div className="space-y-4">
             <h4 className="font-semibold text-background">Legal (RGPD)</h4>
             <p className="text-background/70 text-xs mb-3">
-              Solicita nuestras políticas legales por email (cumplimiento RGPD):
+              Completa el formulario para acceder a nuestras políticas:
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Aviso%20Legal&body=Solicito%20el%20Aviso%20Legal%20de%20zzyworks.com"
-                  className="text-background/70 hover:text-primary transition-colors underline"
+                <button
+                  onClick={() => onOpenModal("aviso")}
+                  className="text-background/70 hover:text-primary transition-colors underline text-left"
                 >
                   📄 Aviso Legal
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Política%20de%20Privacidad&body=Solicito%20la%20Política%20de%20Privacidad%20de%20zzyworks.com"
-                  className="text-background/70 hover:text-primary transition-colors underline"
+                <button
+                  onClick={() => onOpenModal("privacidad")}
+                  className="text-background/70 hover:text-primary transition-colors underline text-left"
                 >
                   🔒 Política de Privacidad
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="mailto:lukiprosp@gmail.com?subject=Solicitud%20Política%20de%20Cookies&body=Solicito%20la%20Política%20de%20Cookies%20de%20zzyworks.com"
-                  className="text-background/70 hover:text-primary transition-colors underline"
+                <button
+                  onClick={() => onOpenModal("cookies")}
+                  className="text-background/70 hover:text-primary transition-colors underline text-left"
                 >
                   🍪 Política de Cookies
-                </a>
+                </button>
               </li>
             </ul>
           </div>
