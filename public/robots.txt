@@ -1,32 +1,30 @@
 # ============================================================================
 # robots.txt - Zaragoza Digital Scale (zzyworks.com)
-# Optimizado para 2026 - Permite rastreo completo a todos los bots
+# Optimizado para Bing Webmaster Tools + Google Search Console 2026
+# ✅ PERMITE RASTREO COMPLETO - Sin avisos de bloqueo
 # ============================================================================
 
-# Configuración por defecto - Permite rastreo a todos los user-agents
+# ============================================================================
+# CONFIGURACIÓN GLOBAL - Todos los bots
+# ============================================================================
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /cgi-bin/
-Disallow: /.env
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /build/
-Disallow: /dist/
-Disallow: /src/
 
-# Googlebot - Acceso completo
+# ============================================================================
+# GOOGLEBOT - Acceso completo sin restricciones
+# ============================================================================
 User-agent: Googlebot
 Allow: /
-Disallow:
 
-# Bingbot - Acceso completo
+# ============================================================================
+# BINGBOT - Acceso completo sin restricciones
+# ============================================================================
 User-agent: Bingbot
 Allow: /
-Disallow:
 
+# ============================================================================
 # Otros bots útiles
+# ============================================================================
 User-agent: Twitterbot
 Allow: /
 
@@ -39,17 +37,13 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-# Bloquear bots maliciosos/limitadores
-User-agent: MJ12bot
-Crawl-delay: 10
+User-agent: Slurp
+Allow: /
 
-User-agent: AhrefsBot
-User-agent: SemrushBot
-Disallow: /
+User-agent: DuckDuckBot
+Allow: /
 
 # ============================================================================
-# Sitemap - IMPORTANTE: Asegúrate de que exista en tu raíz
-# Si aún no lo tienes, crea uno en /public/sitemap.xml
+# SITEMAPS - Indexación rápida y completa
 # ============================================================================
 Sitemap: https://zzyworks.com/sitemap.xml
-Sitemap: https://zzyworks.com/sitemap-pages.xml
